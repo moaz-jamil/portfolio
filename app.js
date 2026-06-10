@@ -13,34 +13,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('nav-links');
 
     function switchTab(tabId) {
-        // Remove active state from nav links
-        navTabs.forEach(tab => {
-            tab.classList.remove('active');
-            if (tab.getAttribute('data-tab') === tabId) {
-                tab.classList.add('active');
+        const isMobile = window.innerWidth <= 768;
+
+        if (isMobile) {
+            const targetScreen = document.getElementById(`screen-${tabId}`);
+            if (targetScreen) {
+                // Update active tab style
+                navTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('data-tab') === tabId) {
+                        tab.classList.add('active');
+                    }
+                });
+
+                // Close mobile menu
+                if (menuToggle && navLinks) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+
+                // Scroll with offset for sticky mobile header
+                const offset = 70;
+                const elementPosition = targetScreen.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
-        });
+        } else {
+            // Remove active state from nav links
+            navTabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('data-tab') === tabId) {
+                    tab.classList.add('active');
+                }
+            });
 
-        // Hide other screen views, display target screen view
-        tabScreens.forEach(screen => {
-            screen.classList.remove('active');
-            if (screen.getAttribute('id') === `screen-${tabId}`) {
-                screen.classList.add('active');
+            // Hide other screen views, display target screen view
+            tabScreens.forEach(screen => {
+                screen.classList.remove('active');
+                if (screen.getAttribute('id') === `screen-${tabId}`) {
+                    screen.classList.add('active');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (tabId === 'skills') {
+                animateSkills();
             }
-        });
-
-        // Close mobile drawer if active
-        if (menuToggle && navLinks) {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
-
-        // Scroll page to top smoothly
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        // Trigger animations for specific views
-        if (tabId === 'skills') {
-            animateSkills();
         }
     }
 
@@ -152,7 +175,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     statusMsg.innerHTML = '';
                 }, 5000);
             }, 1200);
+    // --- Scroll Spy for Mobile ---
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth > 768) return;
+        
+        let currentTab = 'home';
+        const scrollPosition = window.scrollY + 120;
+
+        tabScreens.forEach(screen => {
+            const sectionTop = screen.offsetTop;
+            const sectionHeight = screen.clientHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+                currentTab = screen.getAttribute('id').replace('screen-', '');
+            }
         });
-    }
+
+        navTabs.forEach(tab => {
+            tab.classList.remove('active');
+            if (tab.getAttribute('data-tab') === currentTab) {
+                tab.classList.add('active');
+            }
+        });
+    });
+
+    // Run skills progress animation on page load
+    setTimeout(animateSkills, 600);
 
 });
