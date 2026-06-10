@@ -85,6 +85,7 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
+    cursor: pointer;
 }
 
 .logo-txt {
@@ -115,6 +116,9 @@ body {
     padding: 10px 0;
     transition: var(--transition-fast);
     position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .nav-btn::after {
@@ -150,6 +154,8 @@ body {
     background-color: var(--gold);
     padding: 10px 24px;
     border-radius: 20px;
+    border: none;
+    cursor: pointer;
     transition: var(--transition-smooth);
 }
 
@@ -165,6 +171,9 @@ body {
     justify-content: space-between;
     width: 24px;
     height: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .mobile-toggle .line {
@@ -277,6 +286,8 @@ body {
     color: var(--bg-main);
     padding: 12px 28px;
     border-radius: 2px;
+    border: none;
+    cursor: pointer;
     transition: var(--transition-smooth);
 }
 
@@ -290,9 +301,11 @@ body {
     font-weight: 700;
     font-size: 0.82rem;
     border: 1px solid var(--border-light);
+    background: none;
     color: var(--text-main);
     padding: 12px 28px;
     border-radius: 2px;
+    cursor: pointer;
     transition: var(--transition-smooth);
 }
 
@@ -840,6 +853,8 @@ body {
     border-radius: 2px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    border: none;
+    cursor: pointer;
     transition: var(--transition-smooth);
 }
 
