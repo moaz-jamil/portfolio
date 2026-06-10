@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moaz Jamil | Full Stack Developer | Flutter & Django Specialist</title>
-    <meta name="description" content="Portfolio of Moaz Jamil, a skilled Full Stack Developer with 1 year of experience in Flutter, Django, Python, and Cross-Platform Mobile/Desktop App Development.">
-    <meta name="keywords" content="Moaz Jamil, Full Stack Developer, Flutter Developer, Django Developer, Python Developer, Lahore, Pakistan, Software Engineer Portfolio">
+    <title>Moaz Jamil | Full Stack Developer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Moaz Jamil, Full Stack Developer specializing in Flutter and Django.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,668 +19,474 @@
 </head>
 <body>
 
-    <!-- Background Decoration -->
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-    <div class="glow-orb orb-3"></div>
+    <!-- Subtle Background Highlights -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
 
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-accent">&lt;</span>Moaz Jamil<span class="logo-accent"> /&gt;</span>
-            </a>
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Navigation Header -->
+        <header class="navbar">
+            <div class="nav-brand">
+                <span class="brand-text">Moaz Jamil</span>
+                <span class="brand-badge">Full Stack Developer</span>
+            </div>
             
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#about" class="nav-link active">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <nav class="nav-links" id="nav-links">
+                <button class="nav-tab active" data-tab="home">Home</button>
+                <button class="nav-tab" data-tab="projects">Projects</button>
+                <button class="nav-tab" data-tab="experience">Experience</button>
+                <button class="nav-tab" data-tab="skills">Skills</button>
+                <button class="nav-tab" data-tab="contact">Contact</button>
             </nav>
 
             <div class="nav-actions">
-                <a href="#contact" class="btn btn-outline btn-sm hide-mobile">Hire Me</a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <a href="#contact" class="btn btn-primary btn-sm hire-btn" data-tab-trigger="contact">Hire Me</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="main-content">
-        
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="section-container hero-grid">
-                <div class="hero-info">
-                    <div class="badge">Available for Opportunities</div>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Moaz Jamil</span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        I build <span class="typing-text" id="typing-text">Flutter Mobile Apps</span>
-                    </h2>
-                    <p class="hero-description">
-                        An ambitious Full Stack Developer with hands-on experience in building clean, responsive, and user-friendly web, mobile, and desktop applications. Specializing in high-performance Flutter apps and robust Django backends.
-                    </p>
+        <!-- Main Screen Views -->
+        <main class="content-viewport">
+            
+            <!-- SCREEN 1: HOME HUB -->
+            <section class="tab-screen active" id="screen-home">
+                <div class="dashboard-layout">
                     
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
-                        <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> View Work</a>
-                    </div>
-                    
-                    <div class="hero-socials">
-                        <a href="https://linkedin.com/in/moaz-jamil-3630a7324/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://github.com/moaz-jamil" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:jamilahmed20201970@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="tel:+923054246898" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual">
-                    <div class="cube-container">
-                        <div class="glass-cube">
-                            <div class="face front"><i class="fa-brands fa-flutter color-flutter"></i></div>
-                            <div class="face back"><i class="fa-brands fa-python color-python"></i></div>
-                            <div class="face right"><i class="fa-solid fa-server color-django"></i></div>
-                            <div class="face left"><i class="fa-solid fa-database color-db"></i></div>
-                            <div class="face top"><i class="fa-brands fa-js color-js"></i></div>
-                            <div class="face bottom"><i class="fa-brands fa-github"></i></div>
-                        </div>
-                        <div class="cube-shadow"></div>
-                    </div>
-                    
-                    <!-- Stats Floating Card -->
-                    <div class="floating-card stat-card-1">
-                        <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <div>
-                            <h4>1+ Year</h4>
-                            <p>Development Exp.</p>
+                    <!-- Bio Introduction Card -->
+                    <div class="hub-card hero-card col-2">
+                        <div class="card-tag">Welcome</div>
+                        <h1>Building clean, scalable web and mobile solutions.</h1>
+                        <p class="hero-desc">
+                            I am an ambitious Full Stack Developer with 1 year of hands-on experience in Flutter and Django. I specialize in building responsive cross-platform mobile apps and secure, database-driven backend APIs.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary tab-trigger" data-target="projects">View Projects</button>
+                            <button class="btn btn-secondary tab-trigger" data-target="contact">Let's Talk</button>
                         </div>
                     </div>
-                    <div class="floating-card stat-card-2">
-                        <div class="stat-icon"><i class="fa-solid fa-rocket"></i></div>
-                        <div>
-                            <h4>5+ Projects</h4>
-                            <p>Successfully Delivered</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">About Me</span>
-                    <h3 class="section-title">Crafting Scalable Solutions</h3>
-                    <div class="section-line"></div>
+                    <!-- Quick Contact Card -->
+                    <div class="hub-card stats-card">
+                        <div class="card-tag">At a Glance</div>
+                        <div class="quick-profile">
+                            <img src="https://avatars.githubusercontent.com/moaz-jamil" alt="Moaz Jamil" onerror="this.src='https://ui-avatars.com/api/?name=Moaz+Jamil&background=6366f1&color=ffffff'" class="profile-img">
+                            <h4>Moaz Jamil</h4>
+                            <p>Lahore, Pakistan</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <h3>1+</h3>
+                                <p>Years Exp.</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>5+</h3>
+                                <p>Projects Done</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project Spotlight -->
+                    <div class="hub-card col-2">
+                        <div class="card-tag">Featured Project</div>
+                        <div class="spotlight-project">
+                            <div class="project-details">
+                                <h4>AI-Powered E-Commerce Platform</h4>
+                                <p class="project-text">
+                                    Developing a full-stack, AI-powered e-commerce store with secure user sessions, role-based dashboards, PostgreSQL database layers, and recommendation engines.
+                                </p>
+                                <div class="tech-row">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">AI Integration</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary tab-trigger" data-target="projects">Explore All Projects</button>
+                        </div>
+                    </div>
+
+                    <!-- Education Snapshot -->
+                    <div class="hub-card">
+                        <div class="card-tag">Education</div>
+                        <div class="edu-list">
+                            <div class="edu-card">
+                                <h5>BS Computer Science</h5>
+                                <p class="edu-inst">NCBA&E (Oct 2022 - Present)</p>
+                            </div>
+                            <div class="edu-card">
+                                <h5>Frontend Developer</h5>
+                                <p class="edu-inst">KICS Lahore (Nov 2025)</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                
-                <div class="about-grid">
-                    <div class="about-text-card">
-                        <p class="lead-text">
-                            I am a software developer based in Lahore, Pakistan, currently pursuing a Bachelor of Computer Science (BSCS) at NCBA&E.
-                        </p>
-                        <p>
-                            My passion lies in bridging the gap between elegant frontend interfaces and robust backend architectures. With a solid foundation in software engineering, I specialize in cross-platform mobile development using Flutter and secure API development using Django.
-                        </p>
-                        <p>
-                            I have spent the last year working at KICS (Al-Khwarizmi Institute of Computer Science), contributing to real-world government and enterprise projects, including hospital management software, point of sale desktop platforms, and content restriction management apps.
-                        </p>
+            </section>
+
+            <!-- SCREEN 2: WORK / PROJECTS -->
+            <section class="tab-screen" id="screen-projects">
+                <div class="projects-container">
+                    <div class="screen-header">
+                        <h2>Projects Portfolio</h2>
+                        <p>Real-world projects developed for government, enterprise, and academic platforms.</p>
                         
-                        <div class="personal-info-grid">
-                            <div class="info-item">
-                                <span class="info-label">Location</span>
-                                <span class="info-value">Lahore, Pakistan</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Education</span>
-                                <span class="info-value">BS Computer Science (NCBA&E)</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Email</span>
-                                <span class="info-value"><a href="mailto:jamilahmed20201970@gmail.com">jamilahmed20201970@gmail.com</a></span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">Phone</span>
-                                <span class="info-value"><a href="tel:+923054246898">+92 305 4246898</a></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-cards">
-                        <div class="feature-card">
-                            <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                            <h5>Mobile & Desktop Apps</h5>
-                            <p>High performance, beautiful UI, and native-feeling interactions using Flutter and Dart.</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon"><i class="fa-solid fa-terminal"></i></div>
-                            <h5>Robust Backend APIs</h5>
-                            <p>Scalable RESTful services, secure JWT authentication, and custom data processing with Django REST Framework.</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon"><i class="fa-solid fa-database"></i></div>
-                            <h5>Database Management</h5>
-                            <p>Designing structured relations, writing optimized queries, and schema optimization using MySQL & PostgreSQL.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skills Section -->
-        <section id="skills" class="skills-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Expertise</span>
-                    <h3 class="section-title">My Technical Toolkit</h3>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="skills-grid">
-                    <!-- Tech Category 1 -->
-                    <div class="skills-category-card">
-                        <div class="category-header">
-                            <i class="fa-solid fa-code-branch category-icon"></i>
-                            <h4>Mobile & Desktop</h4>
-                        </div>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Flutter & Dart</span>
-                                    <span class="skill-pct">90%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Flutter Desktop</span>
-                                    <span class="skill-pct">85%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">State Management (Provider/Bloc)</span>
-                                    <span class="skill-pct">80%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
-                            </div>
+                        <!-- Portfolio Filter Controls -->
+                        <div class="filter-controls">
+                            <button class="filter-btn active" data-filter="all">All Projects</button>
+                            <button class="filter-btn" data-filter="flutter">Flutter</button>
+                            <button class="filter-btn" data-filter="django">Django</button>
                         </div>
                     </div>
 
-                    <!-- Tech Category 2 -->
-                    <div class="skills-category-card">
-                        <div class="category-header">
-                            <i class="fa-solid fa-gears category-icon"></i>
-                            <h4>Backend Development</h4>
-                        </div>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Django & Python</span>
-                                    <span class="skill-pct">85%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                    <div class="projects-grid">
+                        
+                        <!-- Project 1 -->
+                        <div class="project-card" data-category="flutter">
+                            <div class="project-meta">
+                                <span class="project-badge">Mobile App</span>
+                                <i class="fa-solid fa-mobile-screen-button"></i>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Django REST Framework</span>
-                                    <span class="skill-pct">80%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JWT Auth & API Security</span>
-                                    <span class="skill-pct">85%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tech Category 3 -->
-                    <div class="skills-category-card">
-                        <div class="category-header">
-                            <i class="fa-solid fa-window-restore category-icon"></i>
-                            <h4>Frontend & Databases</h4>
-                        </div>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML, CSS, Bootstrap</span>
-                                    <span class="skill-pct">88%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">MySQL & PostgreSQL</span>
-                                    <span class="skill-pct">80%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">C++ Programming</span>
-                                    <span class="skill-pct">75%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Small Badges List for quick scanning -->
-                <div class="badge-container">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Dart</span>
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Django</span>
-                    <span class="tech-badge">REST APIs</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">JWT Authentication</span>
-                    <span class="tech-badge">C++</span>
-                    <span class="tech-badge">Git & GitHub</span>
-                    <span class="tech-badge">Swagger / Postman</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">My Path</span>
-                    <h3 class="section-title">Work & Professional Experience</h3>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="timeline">
-                    <!-- Experience Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Oct 2025 - Present</div>
-                        <div class="timeline-content glass-card">
-                            <div class="experience-header">
-                                <div>
-                                    <h4 class="role-title">Flutter Developer - PHOTA Mobile App</h4>
-                                    <h5 class="company-name"><i class="fa-solid fa-building"></i> KICS (Al-Khwarizmi Institute of Computer Science), Lahore</h5>
-                                </div>
-                                <span class="exp-badge">Current</span>
-                            </div>
-                            <p class="exp-desc">
-                                Developing the official mobile application for the **Pakistan Human Organ Transplant Authority (PHOTA)**, managing hospital accreditation, organ transplant assessments, and medical record-keeping.
-                            </p>
-                            <ul class="exp-details-list">
-                                <li>Built modern, responsive cross-platform interfaces using Flutter & Dart focused on smooth rendering and strict data entry workflows.</li>
-                                <li>Implemented secure stateful JWT authentication to guarantee that sensitive organizational and medical profiles are heavily protected.</li>
-                                <li>Integrated app features with internal .NET Core backend services using Swagger-documented API endpoints for real-time operations.</li>
-                                <li>Collaborated extensively with government supervisors to streamline system workflows and comply with data privacy policies.</li>
+                            <h3>PHOTA Mobile Portal</h3>
+                            <p>Developed a Flutter app for hospital accreditation and organ transplant records management at KICS Lahore.</p>
+                            <ul class="project-points">
+                                <li>JWT Authentication for medical security.</li>
+                                <li>Integrated with .NET Core backend APIs.</li>
+                                <li>Collaborated directly with government officials.</li>
                             </ul>
-                            <div class="card-tech-stack">
-                                <span>Flutter</span>
-                                <span>Dart</span>
-                                <span>JWT Auth</span>
-                                <span>.NET Core APIs</span>
-                                <span>Swagger</span>
+                            <div class="tech-row">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span>JWT</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Experience Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Sep 2025 - Oct 2025</div>
-                        <div class="timeline-content glass-card">
-                            <div class="experience-header">
-                                <div>
-                                    <h4 class="role-title">Flutter Developer - Alwaiz Developers</h4>
-                                    <h5 class="company-name"><i class="fa-solid fa-building"></i> KICS, Lahore</h5>
-                                </div>
+                        <!-- Project 2 -->
+                        <div class="project-card" data-category="flutter">
+                            <div class="project-meta">
+                                <span class="project-badge">Desktop & Web</span>
+                                <i class="fa-solid fa-desktop"></i>
                             </div>
-                            <p class="exp-desc">
-                                Contributed to the development of a security-focused administrative application for Alwaiz Company, emphasizing secure controls, subscription management, and assistant tooling.
-                            </p>
-                            <ul class="exp-details-list">
-                                <li>Architected and designed the entire Flutter administrative interface with modern styles, dark UI accents, and modular navigation.</li>
-                                <li>Implemented subscription and feature-access rules, permitting administrators to control access levels.</li>
-                                <li>Programmed strict live link filtering and structural content-blocking components to safeguard proprietary business files.</li>
-                                <li>Built an interactive **AI chatbot component** into the app, improving support efficiency and offering automated guided assistance.</li>
+                            <h3>POS Client & CRM Dashboard</h3>
+                            <p>Contributed to a Flutter desktop frontend and Django REST backend for store inventory management at KICS.</p>
+                            <ul class="project-points">
+                                <li>Optimized for keyboard shortcuts and widelayouts.</li>
+                                <li>Developed inventory CRUD endpoints.</li>
+                                <li>Built real-time data sync modules.</li>
                             </ul>
-                            <div class="card-tech-stack">
-                                <span>Flutter</span>
-                                <span>Dart</span>
-                                <span>AI Chatbot</span>
-                                <span>Admin Security</span>
-                                <span>JSON APIs</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Jul 2025 - Sep 2025</div>
-                        <div class="timeline-content glass-card">
-                            <div class="experience-header">
-                                <div>
-                                    <h4 class="role-title">Full Stack Developer - POS Desktop Application & CRM Dashboard</h4>
-                                    <h5 class="company-name"><i class="fa-solid fa-building"></i> KICS, Lahore</h5>
-                                </div>
-                            </div>
-                            <p class="exp-desc">
-                                Built an integrated POS (Point of Sale) client combining a desktop frontend application and a Django CRM backend administration portal.
-                            </p>
-                            <ul class="exp-details-list">
-                                <li>Designed and established reusable Flutter Desktop widgets designed for hardware integration, hotkeys, and wide screen optimization.</li>
-                                <li>Developed a clean database-backed REST service using Django REST Framework for POS transactions, inventory monitoring, and user permission groups.</li>
-                                <li>Integrated local data sync structures to handle backend-offline status and ensure data consistency.</li>
-                            </ul>
-                            <div class="card-tech-stack">
-                                <span>Flutter Desktop</span>
-                                <span>Django REST Framework</span>
+                            <div class="tech-row">
+                                <span class="tech-tag">Flutter Desktop</span>
+                                <span class="tech-tag">Django DRF</span>
                                 <span>MySQL</span>
-                                <span>Desktop UI</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Experience Item 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Feb 2026 - May 2026</div>
-                        <div class="timeline-content glass-card">
-                            <div class="experience-header">
-                                <div>
-                                    <h4 class="role-title">Lab Assistant & IT Support</h4>
-                                    <h5 class="company-name"><i class="fa-solid fa-building"></i> NAVTTC Program</h5>
-                                </div>
+                        <!-- Project 3 -->
+                        <div class="project-card" data-category="flutter">
+                            <div class="project-meta">
+                                <span class="project-badge">Mobile App</span>
+                                <i class="fa-solid fa-lock"></i>
                             </div>
-                            <p class="exp-desc">
-                                Provided technical management and mentorship inside the national technical training program.
-                            </p>
-                            <ul class="exp-details-list">
-                                <li>Assisted 50+ students in setting up development environments, resolving bugs in code syntax, and executing clean system commands.</li>
-                                <li>Handled lab server configurations and resolved technical hardware/network problems to maintain 100% lab uptime.</li>
+                            <h3>Alwaiz Developers App</h3>
+                            <p>Flutter application for administration control featuring subscriptions, content filtering, and an assistant chatbot.</p>
+                            <ul class="project-points">
+                                <li>Dynamic link restriction protocols.</li>
+                                <li>Secure exclusive administrator login.</li>
+                                <li>Interactive assistant bot integration.</li>
                             </ul>
-                            <div class="card-tech-stack">
-                                <span>IT Support</span>
-                                <span>Mentoring</span>
-                                <span>Environment Setup</span>
+                            <div class="tech-row">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span>Chatbot</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Showcase</span>
-                    <h3 class="section-title">Featured Work & Projects</h3>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card glass-card">
-                        <div class="project-image-placeholder">
-                            <i class="fa-solid fa-brain project-placeholder-icon"></i>
-                            <div class="project-badge">Final Year Project</div>
-                        </div>
-                        <div class="project-body">
-                            <h4 class="project-title">AI-Powered E-Commerce Platform</h4>
-                            <p class="project-text">
-                                A next-generation shop layout driven by machine learning features, focusing on user recommendations and efficient order processes.
-                            </p>
-                            <div class="project-highlights">
-                                <span><i class="fa-solid fa-check"></i> Smart Recommendation Engine</span>
-                                <span><i class="fa-solid fa-check"></i> Automated Customer Assistant</span>
-                                <span><i class="fa-solid fa-check"></i> Dashboard Analytics</span>
+                        <!-- Project 4 -->
+                        <div class="project-card" data-category="django">
+                            <div class="project-meta">
+                                <span class="project-badge">Web & AI</span>
+                                <i class="fa-solid fa-brain"></i>
                             </div>
-                            <div class="card-tech-stack">
-                                <span>Django</span>
-                                <span>PostgreSQL</span>
+                            <h3>AI E-Commerce Platform (FYP)</h3>
+                            <p>A full-stack online catalog equipped with intelligent customer recommendations and orders management.</p>
+                            <ul class="project-points">
+                                <li>Smart content recommendation algorithms.</li>
+                                <li>Relational PostgreSQL query optimization.</li>
+                                <li>Role-based client & admin dashboard panels.</li>
+                            </ul>
+                            <div class="tech-row">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
                                 <span>Python</span>
-                                <span>AI Integration</span>
-                                <span>REST APIs</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/moaz-jamil" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Repository</a>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card glass-card">
-                        <div class="project-image-placeholder">
-                            <i class="fa-solid fa-cash-register project-placeholder-icon"></i>
-                            <div class="project-badge">KICS Project</div>
-                        </div>
-                        <div class="project-body">
-                            <h4 class="project-title">POS CRM Dashboard & Desktop System</h4>
-                            <p class="project-text">
-                                High-performance client-server desktop integration designed to manage sales pipelines, inventory flow, and multi-user roles under high transaction rates.
-                            </p>
-                            <div class="project-highlights">
-                                <span><i class="fa-solid fa-check"></i> Keyboard Shortkey Mapping</span>
-                                <span><i class="fa-solid fa-check"></i> Real-time sync</span>
-                                <span><i class="fa-solid fa-check"></i> Order management APIs</span>
-                            </div>
-                            <div class="card-tech-stack">
-                                <span>Flutter Desktop</span>
-                                <span>Django DRF</span>
-                                <span>MySQL</span>
-                                <span>REST Client</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/moaz-jamil" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card glass-card">
-                        <div class="project-image-placeholder">
-                            <i class="fa-solid fa-lock project-placeholder-icon"></i>
-                            <div class="project-badge">Alwaiz Developers</div>
-                        </div>
-                        <div class="project-body">
-                            <h4 class="project-title">Secure Subscription Control Panel</h4>
-                            <p class="project-text">
-                                An administrative hub developed to manage customer accounts, lock out dynamic resources, and interact with quick AI assistance.
-                            </p>
-                            <div class="project-highlights">
-                                <span><i class="fa-solid fa-check"></i> Subscription Restrictions</span>
-                                <span><i class="fa-solid fa-check"></i> Dynamic URL Filtering</span>
-                                <span><i class="fa-solid fa-check"></i> Chatbot Help Desk</span>
-                            </div>
-                            <div class="card-tech-stack">
-                                <span>Flutter</span>
-                                <span>Dart</span>
-                                <span>JWT Auth</span>
-                                <span>Support System</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/moaz-jamil" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Details</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Academic & Certifications -->
-        <section class="education-section">
-            <div class="section-container education-grid">
-                <!-- Education -->
-                <div class="edu-column">
-                    <div class="section-header">
-                        <span class="section-tag">Education</span>
-                        <h3 class="section-title">Academic Studies</h3>
-                        <div class="section-line"></div>
-                    </div>
-                    <div class="glass-card edu-card">
-                        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <div class="edu-info">
-                            <span class="edu-date">Oct 2022 - Present</span>
-                            <h4>Bachelor of Computer Science (BSCS)</h4>
-                            <h5>NCBA&E (National College of Business Administration & Economics)</h5>
-                            <p>Deepening knowledge in data structures, algorithms, database management systems, and advanced software engineering methodologies.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certifications -->
-                <div class="edu-column">
-                    <div class="section-header">
-                        <span class="section-tag">Badges</span>
-                        <h3 class="section-title">Certifications</h3>
-                        <div class="section-line"></div>
-                    </div>
-                    <div class="glass-card edu-card">
-                        <div class="edu-icon"><i class="fa-solid fa-award"></i></div>
-                        <div class="edu-info">
-                            <span class="edu-date">Nov 2025</span>
-                            <h4>Frontend Developer Certification</h4>
-                            <h5>KICS Lahore</h5>
-                            <p>Comprehensive training on semantic markup, responsive frameworks, state handling, and client-server rendering pipelines.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Contact</span>
-                    <h3 class="section-title">Let's Build Something Together</h3>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="contact-grid">
-                    <!-- Contact Cards -->
-                    <div class="contact-cards-container">
-                        <div class="contact-info-card glass-card">
-                            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <h5>Email Me</h5>
-                                <p><a href="mailto:jamilahmed20201970@gmail.com">jamilahmed20201970@gmail.com</a></p>
-                                <span class="contact-card-sub">Active support inbox</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-card glass-card">
-                            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <h5>Call or WhatsApp</h5>
-                                <p><a href="tel:+923054246898">+92 305 4246898</a></p>
-                                <span class="contact-card-sub">Available Mon-Sat 9am - 6pm</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-card glass-card">
-                            <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <h5>Location</h5>
-                                <p>Lahore, Punjab, Pakistan</p>
-                                <span class="contact-card-sub">Open to remote & hybrid roles</span>
-                            </div>
-                        </div>
+            <!-- SCREEN 3: EXPERIENCE -->
+            <section class="tab-screen" id="screen-experience">
+                <div class="experience-container">
+                    <div class="screen-header">
+                        <h2>Work Experience</h2>
+                        <p>1 year of professional and technical roles in software institutes.</p>
                     </div>
 
-                    <!-- Contact Form -->
-                    <div class="contact-form-container glass-card">
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                    <div class="timeline">
+                        
+                        <!-- Job 1 -->
+                        <div class="timeline-card">
+                            <div class="timeline-badge">Present</div>
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3>Flutter Developer (PHOTA Portal)</h3>
+                                        <h4 class="company">KICS, Lahore</h4>
+                                    </div>
+                                    <span class="timeline-date">Oct 2025 - Present</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="email">Your Email</label>
-                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                <p>
+                                    Developing the mobile application for the Pakistan Human Organ Transplant Authority (PHOTA), establishing secure modules, and syncing workflows.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="timeline-card">
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3>Full Stack Developer (POS Desktop Application)</h3>
+                                        <h4 class="company">KICS, Lahore</h4>
+                                    </div>
+                                    <span class="timeline-date">July 2025 - Sep 2025</span>
+                                </div>
+                                <p>
+                                    Contributed to both desktop POS client layouts (Flutter) and REST databases management (Django + MySQL) for inventory controls.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="timeline-card">
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3>Flutter Developer (Alwaiz Developers)</h3>
+                                        <h4 class="company">KICS, Lahore</h4>
+                                    </div>
+                                    <span class="timeline-date">Sep 2025 - Oct 2025</span>
+                                </div>
+                                <p>
+                                    Constructed security interfaces, restricted file view layers, and programmed automated query chatbots inside the administrative mobile client.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 4 -->
+                        <div class="timeline-card">
+                            <div class="timeline-body">
+                                <div class="timeline-header">
+                                    <div>
+                                        <h3>Lab Assistant & IT Support</h3>
+                                        <h4 class="company">NAVTTC Program</h4>
+                                    </div>
+                                    <span class="timeline-date">Feb 2026 - May 2026</span>
+                                </div>
+                                <p>
+                                    Guided students in software environment setups, debugged syntax issues, and maintained computer hardware records.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SCREEN 4: SKILLS -->
+            <section class="tab-screen" id="screen-skills">
+                <div class="skills-container">
+                    <div class="screen-header">
+                        <h2>Skills & Expertise</h2>
+                        <p>Detailed breakdown of framework knowledge, libraries, and core coding proficiencies.</p>
+                    </div>
+
+                    <div class="skills-grid-layout">
+                        
+                        <!-- Skill Category 1 -->
+                        <div class="skills-card">
+                            <h4>Mobile & Desktop</h4>
+                            <div class="skill-meter-list">
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>Flutter & Dart</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 90%"></div></div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>Flutter Desktop Widgets</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>State Management (Provider/Bloc)</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                    <input type="text" id="subject" name="subject" required placeholder="Collaboration Opportunity">
+                        </div>
+
+                        <!-- Skill Category 2 -->
+                        <div class="skills-card">
+                            <h4>Backend Frameworks</h4>
+                            <div class="skill-meter-list">
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>Django & Python</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>Django REST Framework</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>JWT API Security</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <!-- Skill Category 3 -->
+                        <div class="skills-card">
+                            <h4>Databases & Tools</h4>
+                            <div class="skill-meter-list">
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>MySQL & PostgreSQL</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>HTML, CSS & Bootstrap</span>
+                                        <span>88%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 88%"></div></div>
+                                </div>
+                                <div class="meter-item">
+                                    <div class="meter-labels">
+                                        <span>Git & Version Control</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
-                                <i class="fa-solid fa-paper-plane"></i> Send Message
-                            </button>
-                            <div class="form-status" id="form-status"></div>
-                        </form>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+            <!-- SCREEN 5: CONTACT -->
+            <section class="tab-screen" id="screen-contact">
+                <div class="contact-container">
+                    <div class="screen-header">
+                        <h2>Get In Touch</h2>
+                        <p>Feel free to reach out for collaboration, project details, or freelance work.</p>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <p class="copyright">&copy; <span id="current-year"></span> Moaz Jamil. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://linkedin.com/in/moaz-jamil-3630a7324/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/moaz-jamil" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:jamilahmed20201970@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
+                    <div class="contact-grid">
+                        <!-- Left Info -->
+                        <div class="contact-details-panel">
+                            <div class="contact-item-link">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p><a href="mailto:jamilahmed20201970@gmail.com">jamilahmed20201970@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item-link">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h5>Phone</h5>
+                                    <p><a href="tel:+923054246898">+92 305 4246898</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <div>
+                                    <h5>LinkedIn</h5>
+                                    <p><a href="https://linkedin.com/in/moaz-jamil-3630a7324/" target="_blank" rel="noopener">Moaz Jamil</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item-link">
+                                <i class="fa-brands fa-github"></i>
+                                <div>
+                                    <h5>GitHub</h5>
+                                    <p><a href="https://github.com/moaz-jamil" target="_blank" rel="noopener">github.com/moaz-jamil</a></p>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Interactive AI Chatbot Widget (Showcases chatbot expertise!) -->
-    <div class="chatbot-widget" id="chatbot-widget">
-        <button class="chatbot-btn" id="chatbot-btn" aria-label="Open Chatbot">
-            <span class="pulse-indicator"></span>
-            <i class="fa-solid fa-comments chat-open-icon"></i>
-            <i class="fa-solid fa-xmark chat-close-icon hidden"></i>
-        </button>
+                        <!-- Right Form -->
+                        <div class="contact-form-panel">
+                            <form id="contact-form" class="clean-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" required placeholder="Enter name...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" required placeholder="Enter email...">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" required placeholder="Project proposal...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" rows="5" required placeholder="Tell me details..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Send Message</button>
+                                <div class="form-status-msg" id="form-status-msg"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
         
-        <div class="chatbot-panel glass-card hidden" id="chatbot-panel">
-            <div class="chatbot-header">
-                <div class="chatbot-avatar"><i class="fa-solid fa-robot"></i></div>
-                <div>
-                    <h5>Moaz's Assistant</h5>
-                    <p class="status-online"><span class="status-dot"></span> Online</p>
-                </div>
-            </div>
-            
-            <div class="chatbot-messages" id="chatbot-messages">
-                <div class="chat-msg bot">
-                    <p>Hi! I am Moaz's virtual assistant. Ask me anything about Moaz's skills and projects!</p>
-                </div>
-            </div>
-            
-            <div class="chatbot-suggestions">
-                <button class="suggest-btn" data-question="skills">What are his core skills?</button>
-                <button class="suggest-btn" data-question="experience">Tell me about KICS experience</button>
-                <button class="suggest-btn" data-question="project">What is his AI FYP project?</button>
-                <button class="suggest-btn" data-question="contact">How can I hire him?</button>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; <span id="footer-year"></span> Moaz Jamil. All rights reserved.</p>
+        </footer>
+
     </div>
 
-    <!-- JS Scripts -->
+    <!-- Custom JS Scripts -->
     <script src="app.js"></script>
 </body>
 </html>
