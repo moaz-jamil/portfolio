@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'https://esm.sh/react@18.2.0';
+import ReactDOM from 'https://esm.sh/react-dom@18.2.0/client';
+import htm from 'https://esm.sh/htm@3.1.1';
 
-export default function App() {
+const html = htm.bind(React.createElement);
+
+function App() {
   // --- STATE HOOKS ---
   const [activePage, setActivePage] = useState('home');
   const [curtainState, setCurtainState] = useState(''); // '', 'active', 'wipe-out'
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState('phota');
   const [activeAccordion, setActiveAccordion] = useState(0); // Index of expanded card
-  const [year, setYear] = useState(new Date().getFullYear());
+  const [year] = useState(new Date().getFullYear());
 
   // Form State
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -112,59 +116,59 @@ export default function App() {
     setActiveAccordion(activeAccordion === index ? -1 : index);
   };
 
-  return (
+  return html`
     <>
       {/* Curtain Transition Overlay */}
-      <div className={`curtain-wipe ${curtainState}`}></div>
+      <div className=${`curtain-wipe ${curtainState}`}></div>
 
       {/* Main Container */}
       <div className="showcase-container">
         
         {/* Navigation Header */}
         <header className="header">
-          <div className="logo" onClick={() => switchPage('home')}>
+          <div className="logo" onClick=${() => switchPage('home')}>
             <span className="logo-txt">M.JAMIL</span>
             <span className="logo-dot"></span>
           </div>
           
-          <nav className={`navigation ${isMenuOpen ? 'active' : ''}`}>
+          <nav className=${`navigation ${isMenuOpen ? 'active' : ''}`}>
             <button 
-              className={`nav-btn ${activePage === 'home' ? 'active' : ''}`}
-              onClick={() => switchPage('home')}
+              className=${`nav-btn ${activePage === 'home' ? 'active' : ''}`}
+              onClick=${() => switchPage('home')}
             >
               01 / Index
             </button>
             <button 
-              className={`nav-btn ${activePage === 'projects' ? 'active' : ''}`}
-              onClick={() => switchPage('projects')}
+              className=${`nav-btn ${activePage === 'projects' ? 'active' : ''}`}
+              onClick=${() => switchPage('projects')}
             >
               02 / Atelier
             </button>
             <button 
-              className={`nav-btn ${activePage === 'experience' ? 'active' : ''}`}
-              onClick={() => switchPage('experience')}
+              className=${`nav-btn ${activePage === 'experience' ? 'active' : ''}`}
+              onClick=${() => switchPage('experience')}
             >
               03 / Chronicle
             </button>
             <button 
-              className={`nav-btn ${activePage === 'skills' ? 'active' : ''}`}
-              onClick={() => switchPage('skills')}
+              className=${`nav-btn ${activePage === 'skills' ? 'active' : ''}`}
+              onClick=${() => switchPage('skills')}
             >
               04 / Codex
             </button>
             <button 
-              className={`nav-btn ${activePage === 'contact' ? 'active' : ''}`}
-              onClick={() => switchPage('contact')}
+              className=${`nav-btn ${activePage === 'contact' ? 'active' : ''}`}
+              onClick=${() => switchPage('contact')}
             >
               05 / Contact
             </button>
           </nav>
 
           <div className="header-actions">
-            <button className="btn-cta" onClick={() => switchPage('contact')}>Get in Touch</button>
+            <button className="btn-cta" onClick=${() => switchPage('contact')}>Get in Touch</button>
             <button 
-              className={`mobile-toggle ${isMenuOpen ? 'active' : ''}`} 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className=${`mobile-toggle ${isMenuOpen ? 'active' : ''}`} 
+              onClick=${() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
             >
               <span className="line"></span>
@@ -177,7 +181,7 @@ export default function App() {
         <div className="viewport">
           
           {/* SCREEN 1: INDEX (HOME) */}
-          <section className={`page-view ${activePage === 'home' ? 'active' : ''}`} id="view-home">
+          <section className=${`page-view ${activePage === 'home' ? 'active' : ''}`} id="view-home">
             <div className="grid-bento">
               
               {/* Introduction Box */}
@@ -188,8 +192,8 @@ export default function App() {
                   I construct clean, high-performance cross-platform mobile apps with Flutter and build robust, secure API structures with Django.
                 </p>
                 <div className="button-group">
-                  <button className="btn-champagne" onClick={() => switchPage('projects')}>Browse Work</button>
-                  <button className="btn-outline" onClick={() => switchPage('experience')}>View Journey</button>
+                  <button className="btn-champagne" onClick=${() => switchPage('projects')}>Browse Work</button>
+                  <button className="btn-outline" onClick=${() => switchPage('experience')}>View Journey</button>
                 </div>
               </div>
 
@@ -201,7 +205,7 @@ export default function App() {
                   <img 
                     src="https://avatars.githubusercontent.com/moaz-jamil" 
                     alt="Moaz Jamil" 
-                    onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Moaz+Jamil&background=dfc08a&color=0d0d0c' }}
+                    onError=${(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Moaz+Jamil&background=dfc08a&color=0d0d0c' }}
                     className="avatar-img"
                   />
                 </div>
@@ -245,7 +249,7 @@ export default function App() {
           </section>
 
           {/* SCREEN 2: ATELIER (PROJECTS) */}
-          <section className={`page-view ${activePage === 'projects' ? 'active' : ''}`} id="view-projects">
+          <section className=${`page-view ${activePage === 'projects' ? 'active' : ''}`} id="view-projects">
             <div className="atelier-layout">
               
               {/* Left Projects Menu */}
@@ -253,32 +257,32 @@ export default function App() {
                 <div className="cell-label">Curated Work</div>
                 
                 <div 
-                  className={`atelier-item ${activeProject === 'phota' ? 'active' : ''}`}
-                  onClick={() => setActiveProject('phota')}
+                  className=${`atelier-item ${activeProject === 'phota' ? 'active' : ''}`}
+                  onClick=${() => setActiveProject('phota')}
                 >
                   <span className="atelier-num">01</span>
                   <h3>PHOTA Mobile System</h3>
                 </div>
 
                 <div 
-                  className={`atelier-item ${activeProject === 'pos' ? 'active' : ''}`}
-                  onClick={() => setActiveProject('pos')}
+                  className=${`atelier-item ${activeProject === 'pos' ? 'active' : ''}`}
+                  onClick=${() => setActiveProject('pos')}
                 >
                   <span className="atelier-num">02</span>
                   <h3>POS Client & CRM</h3>
                 </div>
 
                 <div 
-                  className={`atelier-item ${activeProject === 'alwaiz' ? 'active' : ''}`}
-                  onClick={() => setActiveProject('alwaiz')}
+                  className=${`atelier-item ${activeProject === 'alwaiz' ? 'active' : ''}`}
+                  onClick=${() => setActiveProject('alwaiz')}
                 >
                   <span className="atelier-num">03</span>
                   <h3>Alwaiz Security App</h3>
                 </div>
 
                 <div 
-                  className={`atelier-item ${activeProject === 'fyp' ? 'active' : ''}`}
-                  onClick={() => setActiveProject('fyp')}
+                  className=${`atelier-item ${activeProject === 'fyp' ? 'active' : ''}`}
+                  onClick=${() => setActiveProject('fyp')}
                 >
                   <span className="atelier-num">04</span>
                   <h3>AI E-Commerce Platform</h3>
@@ -288,7 +292,7 @@ export default function App() {
               {/* Right Showcase Display */}
               <div className="atelier-display">
                 
-                <div className={`display-panel ${activeProject === 'phota' ? 'active' : ''}`}>
+                <div className=${`display-panel ${activeProject === 'phota' ? 'active' : ''}`}>
                   <div className="cell-label">Project Details</div>
                   <h2 className="display-title">PHOTA Mobile Portal</h2>
                   <p className="display-desc">
@@ -307,7 +311,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className={`display-panel ${activeProject === 'pos' ? 'active' : ''}`}>
+                <div className=${`display-panel ${activeProject === 'pos' ? 'active' : ''}`}>
                   <div className="cell-label">Project Details</div>
                   <h2 className="display-title">POS Desktop & CRM</h2>
                   <p className="display-desc">
@@ -325,7 +329,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className={`display-panel ${activeProject === 'alwaiz' ? 'active' : ''}`}>
+                <div className=${`display-panel ${activeProject === 'alwaiz' ? 'active' : ''}`}>
                   <div className="cell-label">Project Details</div>
                   <h2 className="display-title">Alwaiz Developers App</h2>
                   <p className="display-desc">
@@ -344,7 +348,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className={`display-panel ${activeProject === 'fyp' ? 'active' : ''}`}>
+                <div className=${`display-panel ${activeProject === 'fyp' ? 'active' : ''}`}>
                   <div className="cell-label">Project Details</div>
                   <h2 className="display-title">AI E-Commerce Store</h2>
                   <p className="display-desc">
@@ -369,7 +373,7 @@ export default function App() {
           </section>
 
           {/* SCREEN 3: CHRONICLE (EXPERIENCE) */}
-          <section className={`page-view ${activePage === 'experience' ? 'active' : ''}`} id="view-experience">
+          <section className=${`page-view ${activePage === 'experience' ? 'active' : ''}`} id="view-experience">
             <div className="chronicle-container">
               <div className="cell-label">Professional Timeline</div>
               <h2 className="section-title">THE CHRONICLE</h2>
@@ -377,8 +381,8 @@ export default function App() {
               <div className="chronicle-accordion">
                 
                 {/* Accordion Card 1 */}
-                <div className={`chronicle-card ${activeAccordion === 0 ? 'active' : ''}`}>
-                  <div className="chronicle-head" onClick={() => toggleAccordion(0)}>
+                <div className=${`chronicle-card ${activeAccordion === 0 ? 'active' : ''}`}>
+                  <div className="chronicle-head" onClick=${() => toggleAccordion(0)}>
                     <span className="chronicle-role">Flutter Developer (PHOTA Portal)</span>
                     <span className="chronicle-meta">KICS, Lahore / Oct 2025 - Present</span>
                     <i className="fa-solid fa-chevron-down acc-icon"></i>
@@ -391,8 +395,8 @@ export default function App() {
                 </div>
 
                 {/* Accordion Card 2 */}
-                <div className={`chronicle-card ${activeAccordion === 1 ? 'active' : ''}`}>
-                  <div className="chronicle-head" onClick={() => toggleAccordion(1)}>
+                <div className=${`chronicle-card ${activeAccordion === 1 ? 'active' : ''}`}>
+                  <div className="chronicle-head" onClick=${() => toggleAccordion(1)}>
                     <span className="chronicle-role">Full Stack Developer (POS Desktop Client)</span>
                     <span className="chronicle-meta">KICS, Lahore / July 2025 - Sep 2025</span>
                     <i className="fa-solid fa-chevron-down acc-icon"></i>
@@ -406,7 +410,7 @@ export default function App() {
 
                 {/* Accordion Card 3 */}
                 <div className={`chronicle-card ${activeAccordion === 2 ? 'active' : ''}`}>
-                  <div className="chronicle-head" onClick={() => toggleAccordion(2)}>
+                  <div className="chronicle-head" onClick=${() => toggleAccordion(2)}>
                     <span className="chronicle-role">Flutter Developer (Alwaiz App)</span>
                     <span className="chronicle-meta">KICS, Lahore / Sep 2025 - Oct 2025</span>
                     <i className="fa-solid fa-chevron-down acc-icon"></i>
@@ -419,8 +423,8 @@ export default function App() {
                 </div>
 
                 {/* Accordion Card 4 */}
-                <div className={`chronicle-card ${activeAccordion === 3 ? 'active' : ''}`}>
-                  <div className="chronicle-head" onClick={() => toggleAccordion(3)}>
+                <div className=${`chronicle-card ${activeAccordion === 3 ? 'active' : ''}`}>
+                  <div className="chronicle-head" onClick=${() => toggleAccordion(3)}>
                     <span className="chronicle-role">IT Assistant & Lab Support</span>
                     <span className="chronicle-meta">NAVTTC Program / Feb 2026 - May 2026</span>
                     <i className="fa-solid fa-chevron-down acc-icon"></i>
@@ -437,7 +441,7 @@ export default function App() {
           </section>
 
           {/* SCREEN 4: CODEX (SKILLS) */}
-          <section className={`page-view ${activePage === 'skills' ? 'active' : ''}`} id="view-skills">
+          <section className=${`page-view ${activePage === 'skills' ? 'active' : ''}`} id="view-skills">
             <div className="codex-container">
               <div className="cell-label">Technical Competence</div>
               <h2 className="section-title">THE CODEX</h2>
@@ -497,7 +501,7 @@ export default function App() {
           </section>
 
           {/* SCREEN 5: CONTACT */}
-          <section className={`page-view ${activePage === 'contact' ? 'active' : ''}`} id="view-contact">
+          <section className=${`page-view ${activePage === 'contact' ? 'active' : ''}`} id="view-contact">
             <div className="contact-layout">
               
               {/* Left Contact Info */}
@@ -538,14 +542,14 @@ export default function App() {
               {/* Right Form Console */}
               <div className="contact-console">
                 <div className="cell-label">Secure Message Transmitter</div>
-                <form onSubmit={handleFormSubmit} className="console-form">
+                <form onSubmit=${handleFormSubmit} className="console-form">
                   <div className="field-group">
                     <input 
                       type="text" 
                       id="t-name" 
                       required 
-                      value={formData.name}
-                      onChange={handleInputChange}
+                      value=${formData.name}
+                      onChange=${handleInputChange}
                       placeholder=" "
                     />
                     <label htmlFor="t-name">Your Name</label>
@@ -555,8 +559,8 @@ export default function App() {
                       type="email" 
                       id="t-email" 
                       required 
-                      value={formData.email}
-                      onChange={handleInputChange}
+                      value=${formData.email}
+                      onChange=${handleInputChange}
                       placeholder=" "
                     />
                     <label htmlFor="t-email">Your Email</label>
@@ -566,8 +570,8 @@ export default function App() {
                       type="text" 
                       id="t-subject" 
                       required 
-                      value={formData.subject}
-                      onChange={handleInputChange}
+                      value=${formData.subject}
+                      onChange=${handleInputChange}
                       placeholder=" "
                     />
                     <label htmlFor="t-subject">Subject</label>
@@ -577,8 +581,8 @@ export default function App() {
                       id="t-message" 
                       rows="4" 
                       required 
-                      value={formData.message}
-                      onChange={handleInputChange}
+                      value=${formData.message}
+                      onChange=${handleInputChange}
                       placeholder=" "
                     ></textarea>
                     <label htmlFor="t-message">Your Message</label>
@@ -586,15 +590,15 @@ export default function App() {
                   <button 
                     type="submit" 
                     className="btn-submit" 
-                    disabled={isSubmitting}
+                    disabled=${isSubmitting}
                   >
-                    {isSubmitting ? 'Transmitting...' : 'Send Message'}
+                    ${isSubmitting ? 'Transmitting...' : 'Send Message'}
                   </button>
-                  {formStatus.text && (
-                    <div className={`status-box ${formStatus.type === 'success' ? 'success' : ''}`}>
-                      {formStatus.text}
+                  ${formStatus.text && html`
+                    <div className=${`status-box ${formStatus.type === 'success' ? 'success' : ''}`}>
+                      ${formStatus.text}
                     </div>
-                  )}
+                  `}
                 </form>
               </div>
 
@@ -606,12 +610,16 @@ export default function App() {
         {/* Minimalist Footer */}
         <footer className="footer">
           <div className="footer-wrap">
-            <p>&copy; {year} Moaz Jamil.</p>
+            <p>&copy; ${year} Moaz Jamil.</p>
             <div className="scroll-ind">SCROLL TO NAVIGATE</div>
           </div>
         </footer>
 
       </div>
     </>
-  );
+  `;
 }
+
+// Render the application directly to the root DOM node
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(App));
