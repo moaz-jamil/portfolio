@@ -3,125 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moaz Jamil | Full Stack Developer Portfolio</title>
-    <meta name="description" content="Professional portfolio of Moaz Jamil, Full Stack Developer specializing in Flutter and Django.">
+    <title>Moaz Jamil | Creative Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Moaz Jamil, Full Stack Developer & Flutter Specialist.">
     
-    <!-- Google Fonts -->
+    <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Subtle Background Highlights -->
-    <div class="bg-glow-1"></div>
-    <div class="bg-glow-2"></div>
+    <!-- Curtain Transition Overlay -->
+    <div class="curtain-wipe" id="curtain-wipe"></div>
 
-    <!-- Main Container -->
-    <div class="app-container">
+    <!-- Main Wrapper -->
+    <div class="showcase-container">
         
-        <!-- Navigation Header -->
-        <header class="navbar">
-            <div class="nav-brand">
-                <span class="brand-text">Moaz Jamil</span>
-                <span class="brand-badge">Full Stack Developer</span>
+        <!-- Elegant Minimalist Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-txt">M.JAMIL</span>
+                <span class="logo-dot"></span>
             </div>
             
-            <nav class="nav-links" id="nav-links">
-                <button class="nav-tab active" data-tab="home">Home</button>
-                <button class="nav-tab" data-tab="projects">Projects</button>
-                <button class="nav-tab" data-tab="experience">Experience</button>
-                <button class="nav-tab" data-tab="skills">Skills</button>
-                <button class="nav-tab" data-tab="contact">Contact</button>
+            <nav class="navigation" id="navigation">
+                <button class="nav-btn active" data-target="home">01 / Index</button>
+                <button class="nav-btn" data-target="projects">02 / Atelier</button>
+                <button class="nav-btn" data-target="experience">03 / Chronicle</button>
+                <button class="nav-btn" data-target="skills">04 / Codex</button>
+                <button class="nav-btn" data-target="contact">05 / Contact</button>
             </nav>
 
-            <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary btn-sm hire-btn" data-tab-trigger="contact">Hire Me</a>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+            <div class="header-actions">
+                <a href="#contact" class="btn-cta nav-trigger" data-dest="contact">Get in Touch</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </button>
             </div>
         </header>
 
-        <!-- Main Screen Views -->
-        <main class="content-viewport">
+        <!-- Pages Container -->
+        <div class="viewport">
             
-            <!-- SCREEN 1: HOME HUB -->
-            <section class="tab-screen active" id="screen-home">
-                <div class="dashboard-layout">
+            <!-- SECTION 1: INDEX (HOME) -->
+            <section class="page-view active" id="view-home">
+                <div class="grid-bento">
                     
-                    <!-- Bio Introduction Card -->
-                    <div class="hub-card hero-card col-2">
-                        <div class="card-tag">Welcome</div>
-                        <h1>Building clean, scalable web and mobile solutions.</h1>
-                        <p class="hero-desc">
-                            I am an ambitious Full Stack Developer with 1 year of hands-on experience in Flutter and Django. I specialize in building responsive cross-platform mobile apps and secure, database-driven backend APIs.
+                    <!-- Main Title Box -->
+                    <div class="grid-cell title-cell col-span-2">
+                        <div class="cell-label">Introduction</div>
+                        <h1 class="main-heading">CREATIVE DEVELOPER ARCHITECTING WEB & MOBILE SYSTEMS.</h1>
+                        <p class="hero-subtext">
+                            I construct clean, high-performance cross-platform mobile apps with Flutter and build robust, secure API structures with Django.
                         </p>
-                        <div class="hero-actions">
-                            <button class="btn btn-primary tab-trigger" data-target="projects">View Projects</button>
-                            <button class="btn btn-secondary tab-trigger" data-target="contact">Let's Talk</button>
+                        <div class="button-group">
+                            <button class="btn-champagne nav-trigger" data-dest="projects">Browse Work</button>
+                            <button class="btn-outline nav-trigger" data-dest="experience">View Journey</button>
                         </div>
                     </div>
 
-                    <!-- Quick Contact Card -->
-                    <div class="hub-card stats-card">
-                        <div class="card-tag">At a Glance</div>
-                        <div class="quick-profile">
-                            <img src="https://avatars.githubusercontent.com/moaz-jamil" alt="Moaz Jamil" onerror="this.src='https://ui-avatars.com/api/?name=Moaz+Jamil&background=6366f1&color=ffffff'" class="profile-img">
-                            <h4>Moaz Jamil</h4>
-                            <p>Lahore, Pakistan</p>
+                    <!-- Profile Visual Circle -->
+                    <div class="grid-cell avatar-cell">
+                        <div class="cell-label">Identity</div>
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring"></div>
+                            <img src="https://avatars.githubusercontent.com/moaz-jamil" alt="Moaz Jamil" onerror="this.src='https://ui-avatars.com/api/?name=Moaz+Jamil&background=dfc08a&color=0d0d0c'" class="avatar-img">
                         </div>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <h3>1+</h3>
-                                <p>Years Exp.</p>
+                        <h3>Moaz Jamil</h3>
+                        <p class="location-txt">Lahore, PK</p>
+                    </div>
+
+                    <!-- Statistics Bento Box -->
+                    <div class="grid-cell stats-cell">
+                        <div class="cell-label">Metrics</div>
+                        <div class="metrics-container">
+                            <div class="metric-block">
+                                <div class="metric-num">1+</div>
+                                <div class="metric-lbl">Years Experience</div>
                             </div>
-                            <div class="stat-item">
-                                <h3>5+</h3>
-                                <p>Projects Done</p>
+                            <div class="metric-block border-left">
+                                <div class="metric-num">5+</div>
+                                <div class="metric-lbl">Apps Shipped</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Featured Project Spotlight -->
-                    <div class="hub-card col-2">
-                        <div class="card-tag">Featured Project</div>
-                        <div class="spotlight-project">
-                            <div class="project-details">
-                                <h4>AI-Powered E-Commerce Platform</h4>
-                                <p class="project-text">
-                                    Developing a full-stack, AI-powered e-commerce store with secure user sessions, role-based dashboards, PostgreSQL database layers, and recommendation engines.
-                                </p>
-                                <div class="tech-row">
-                                    <span class="tech-tag">Django</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">AI Integration</span>
-                                </div>
+                    <!-- Education Bento Box -->
+                    <div class="grid-cell education-cell col-span-2">
+                        <div class="cell-label">Academic Profile</div>
+                        <div class="edu-row">
+                            <div class="edu-item">
+                                <span class="edu-year">2022 - Present</span>
+                                <h4>BS Computer Science</h4>
+                                <p>NCBA&E University</p>
                             </div>
-                            <button class="btn btn-secondary tab-trigger" data-target="projects">Explore All Projects</button>
-                        </div>
-                    </div>
-
-                    <!-- Education Snapshot -->
-                    <div class="hub-card">
-                        <div class="card-tag">Education</div>
-                        <div class="edu-list">
-                            <div class="edu-card">
-                                <h5>BS Computer Science</h5>
-                                <p class="edu-inst">NCBA&E (Oct 2022 - Present)</p>
-                            </div>
-                            <div class="edu-card">
-                                <h5>Frontend Developer</h5>
-                                <p class="edu-inst">KICS Lahore (Nov 2025)</p>
+                            <div class="edu-item border-left">
+                                <span class="edu-year">Nov 2025</span>
+                                <h4>Frontend Specialization</h4>
+                                <p>KICS Lahore</p>
                             </div>
                         </div>
                     </div>
@@ -129,178 +115,176 @@
                 </div>
             </section>
 
-            <!-- SCREEN 2: WORK / PROJECTS -->
-            <section class="tab-screen" id="screen-projects">
-                <div class="projects-container">
-                    <div class="screen-header">
-                        <h2>Projects Portfolio</h2>
-                        <p>Real-world projects developed for government, enterprise, and academic platforms.</p>
+            <!-- SECTION 2: ATELIER (PROJECTS) -->
+            <section class="page-view" id="view-projects">
+                <div class="atelier-layout">
+                    
+                    <!-- Left Projects Menu -->
+                    <div class="atelier-list">
+                        <div class="cell-label">Curated Work</div>
                         
-                        <!-- Portfolio Filter Controls -->
-                        <div class="filter-controls">
-                            <button class="filter-btn active" data-filter="all">All Projects</button>
-                            <button class="filter-btn" data-filter="flutter">Flutter</button>
-                            <button class="filter-btn" data-filter="django">Django</button>
+                        <div class="atelier-item active" data-project="phota">
+                            <span class="atelier-num">01</span>
+                            <h3>PHOTA Mobile System</h3>
+                        </div>
+
+                        <div class="atelier-item" data-project="pos">
+                            <span class="atelier-num">02</span>
+                            <h3>POS Client & CRM</h3>
+                        </div>
+
+                        <div class="atelier-item" data-project="alwaiz">
+                            <span class="atelier-num">03</span>
+                            <h3>Alwaiz Security App</h3>
+                        </div>
+
+                        <div class="atelier-item" data-project="fyp">
+                            <span class="atelier-num">04</span>
+                            <h3>AI E-Commerce Platform</h3>
                         </div>
                     </div>
 
-                    <div class="projects-grid">
-                        
-                        <!-- Project 1 -->
-                        <div class="project-card" data-category="flutter">
-                            <div class="project-meta">
-                                <span class="project-badge">Mobile App</span>
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </div>
-                            <h3>PHOTA Mobile Portal</h3>
-                            <p>Developed a Flutter app for hospital accreditation and organ transplant records management at KICS Lahore.</p>
-                            <ul class="project-points">
-                                <li>JWT Authentication for medical security.</li>
-                                <li>Integrated with .NET Core backend APIs.</li>
-                                <li>Collaborated directly with government officials.</li>
+                    <!-- Right Showcase Display -->
+                    <div class="atelier-display">
+                        <div class="display-panel active" id="display-phota">
+                            <div class="cell-label">Project Details</div>
+                            <h2 class="display-title">PHOTA Mobile Portal</h2>
+                            <p class="display-desc">
+                                A mobile application for the Pakistan Human Organ Transplant Authority (PHOTA), facilitating hospital accreditation protocols and transplant verification.
+                            </p>
+                            <ul class="display-feats">
+                                <li>Stateful JWT token integration.</li>
+                                <li>.NET Core backend connection with Swagger docs.</li>
+                                <li>Collaborated with health department officials.</li>
                             </ul>
-                            <div class="tech-row">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Dart</span>
-                                <span>JWT</span>
+                            <div class="display-tech">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>JWT Security</span>
+                                <span>API Integration</span>
                             </div>
                         </div>
 
-                        <!-- Project 2 -->
-                        <div class="project-card" data-category="flutter">
-                            <div class="project-meta">
-                                <span class="project-badge">Desktop & Web</span>
-                                <i class="fa-solid fa-desktop"></i>
-                            </div>
-                            <h3>POS Client & CRM Dashboard</h3>
-                            <p>Contributed to a Flutter desktop frontend and Django REST backend for store inventory management at KICS.</p>
-                            <ul class="project-points">
-                                <li>Optimized for keyboard shortcuts and widelayouts.</li>
-                                <li>Developed inventory CRUD endpoints.</li>
-                                <li>Built real-time data sync modules.</li>
+                        <div class="display-panel" id="display-pos">
+                            <div class="cell-label">Project Details</div>
+                            <h2 class="display-title">POS Desktop & CRM</h2>
+                            <p class="display-desc">
+                                Multi-window Flutter desktop environment and Django database backend to handle product CRUD operations and local inventory synchronization.
+                            </p>
+                            <ul class="display-feats">
+                                <li>Keyboard shortcut action listeners.</li>
+                                <li>Django REST Framework API security.</li>
+                                <li>Integrated MySQL local cache nodes.</li>
                             </ul>
-                            <div class="tech-row">
-                                <span class="tech-tag">Flutter Desktop</span>
-                                <span class="tech-tag">Django DRF</span>
+                            <div class="display-tech">
+                                <span>Flutter Desktop</span>
+                                <span>Django REST</span>
                                 <span>MySQL</span>
                             </div>
                         </div>
 
-                        <!-- Project 3 -->
-                        <div class="project-card" data-category="flutter">
-                            <div class="project-meta">
-                                <span class="project-badge">Mobile App</span>
-                                <i class="fa-solid fa-lock"></i>
-                            </div>
-                            <h3>Alwaiz Developers App</h3>
-                            <p>Flutter application for administration control featuring subscriptions, content filtering, and an assistant chatbot.</p>
-                            <ul class="project-points">
-                                <li>Dynamic link restriction protocols.</li>
-                                <li>Secure exclusive administrator login.</li>
-                                <li>Interactive assistant bot integration.</li>
+                        <div class="display-panel" id="display-alwaiz">
+                            <div class="cell-label">Project Details</div>
+                            <h2 class="display-title">Alwaiz Developers App</h2>
+                            <p class="display-desc">
+                                Admin panel app including live web filtering, subscription control modules, and an integrated support chatbot.
+                            </p>
+                            <ul class="display-feats">
+                                <li>Restricted URL and content viewer.</li>
+                                <li>Role-based access levels.</li>
+                                <li>Automated chatbot dialogs.</li>
                             </ul>
-                            <div class="tech-row">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Dart</span>
+                            <div class="display-tech">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>Security Blocks</span>
                                 <span>Chatbot</span>
                             </div>
                         </div>
 
-                        <!-- Project 4 -->
-                        <div class="project-card" data-category="django">
-                            <div class="project-meta">
-                                <span class="project-badge">Web & AI</span>
-                                <i class="fa-solid fa-brain"></i>
-                            </div>
-                            <h3>AI E-Commerce Platform (FYP)</h3>
-                            <p>A full-stack online catalog equipped with intelligent customer recommendations and orders management.</p>
-                            <ul class="project-points">
-                                <li>Smart content recommendation algorithms.</li>
-                                <li>Relational PostgreSQL query optimization.</li>
-                                <li>Role-based client & admin dashboard panels.</li>
+                        <div class="display-panel" id="display-fyp">
+                            <div class="cell-label">Project Details</div>
+                            <h2 class="display-title">AI E-Commerce Store</h2>
+                            <p class="display-desc">
+                                Final year project featuring a full-stack Django shopping store combined with user behavior-based recommendation algorithms.
+                            </p>
+                            <ul class="display-feats">
+                                <li>Cold-start recommendation logic.</li>
+                                <li>PostgreSQL complex queries optimization.</li>
+                                <li>Custom administrator command dashboard.</li>
                             </ul>
-                            <div class="tech-row">
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">PostgreSQL</span>
+                            <div class="display-tech">
+                                <span>Django</span>
+                                <span>PostgreSQL</span>
                                 <span>Python</span>
+                                <span>AI Models</span>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </section>
 
-            <!-- SCREEN 3: EXPERIENCE -->
-            <section class="tab-screen" id="screen-experience">
-                <div class="experience-container">
-                    <div class="screen-header">
-                        <h2>Work Experience</h2>
-                        <p>1 year of professional and technical roles in software institutes.</p>
-                    </div>
-
-                    <div class="timeline">
+            <!-- SECTION 3: CHRONICLE (EXPERIENCE) -->
+            <section class="page-view" id="view-experience">
+                <div class="chronicle-container">
+                    <div class="cell-label">Professional Timeline</div>
+                    <h2 class="section-title">THE CHRONICLE</h2>
+                    
+                    <div class="chronicle-accordion">
                         
-                        <!-- Job 1 -->
-                        <div class="timeline-card">
-                            <div class="timeline-badge">Present</div>
-                            <div class="timeline-body">
-                                <div class="timeline-header">
-                                    <div>
-                                        <h3>Flutter Developer (PHOTA Portal)</h3>
-                                        <h4 class="company">KICS, Lahore</h4>
-                                    </div>
-                                    <span class="timeline-date">Oct 2025 - Present</span>
-                                </div>
+                        <!-- Accordion Card 1 -->
+                        <div class="chronicle-card active">
+                            <div class="chronicle-head">
+                                <span class="chronicle-role">Flutter Developer (PHOTA Portal)</span>
+                                <span class="chronicle-meta">KICS, Lahore / Oct 2025 - Present</span>
+                                <i class="fa-solid fa-chevron-down acc-icon"></i>
+                            </div>
+                            <div class="chronicle-body">
                                 <p>
-                                    Developing the mobile application for the Pakistan Human Organ Transplant Authority (PHOTA), establishing secure modules, and syncing workflows.
+                                    Developing the primary cross-platform mobile application for Pakistan Human Organ Transplant Authority. Implementing token state validations, optimizing API handshakes with .NET backends, and refining screen rendering profiles.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Job 2 -->
-                        <div class="timeline-card">
-                            <div class="timeline-body">
-                                <div class="timeline-header">
-                                    <div>
-                                        <h3>Full Stack Developer (POS Desktop Application)</h3>
-                                        <h4 class="company">KICS, Lahore</h4>
-                                    </div>
-                                    <span class="timeline-date">July 2025 - Sep 2025</span>
-                                </div>
+                        <!-- Accordion Card 2 -->
+                        <div class="chronicle-card">
+                            <div class="chronicle-head">
+                                <span class="chronicle-role">Full Stack Developer (POS Desktop Client)</span>
+                                <span class="chronicle-meta">KICS, Lahore / July 2025 - Sep 2025</span>
+                                <i class="fa-solid fa-chevron-down acc-icon"></i>
+                            </div>
+                            <div class="chronicle-body">
                                 <p>
-                                    Contributed to both desktop POS client layouts (Flutter) and REST databases management (Django + MySQL) for inventory controls.
+                                    Co-developed the desktop POS catalog interfaces in Flutter and configured database CRUD pathways using Django REST Framework and MySQL data synchronizers.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Job 3 -->
-                        <div class="timeline-card">
-                            <div class="timeline-body">
-                                <div class="timeline-header">
-                                    <div>
-                                        <h3>Flutter Developer (Alwaiz Developers)</h3>
-                                        <h4 class="company">KICS, Lahore</h4>
-                                    </div>
-                                    <span class="timeline-date">Sep 2025 - Oct 2025</span>
-                                </div>
+                        <!-- Accordion Card 3 -->
+                        <div class="chronicle-card">
+                            <div class="chronicle-head">
+                                <span class="chronicle-role">Flutter Developer (Alwaiz App)</span>
+                                <span class="chronicle-meta">KICS, Lahore / Sep 2025 - Oct 2025</span>
+                                <i class="fa-solid fa-chevron-down acc-icon"></i>
+                            </div>
+                            <div class="chronicle-body">
                                 <p>
-                                    Constructed security interfaces, restricted file view layers, and programmed automated query chatbots inside the administrative mobile client.
+                                    Configured secure administrator locks, implemented URL and links blockades, and integrated chatbot automation pipelines.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Job 4 -->
-                        <div class="timeline-card">
-                            <div class="timeline-body">
-                                <div class="timeline-header">
-                                    <div>
-                                        <h3>Lab Assistant & IT Support</h3>
-                                        <h4 class="company">NAVTTC Program</h4>
-                                    </div>
-                                    <span class="timeline-date">Feb 2026 - May 2026</span>
-                                </div>
+                        <!-- Accordion Card 4 -->
+                        <div class="chronicle-card">
+                            <div class="chronicle-head">
+                                <span class="chronicle-role">IT Assistant & Lab Support</span>
+                                <span class="chronicle-meta">NAVTTC Program / Feb 2026 - May 2026</span>
+                                <i class="fa-solid fa-chevron-down acc-icon"></i>
+                            </div>
+                            <div class="chronicle-body">
                                 <p>
-                                    Guided students in software environment setups, debugged syntax issues, and maintained computer hardware records.
+                                    Provided support in programming environments config, hardware maintenance, and troubleshot code execution syntax issues for students.
                                 </p>
                             </div>
                         </div>
@@ -309,97 +293,59 @@
                 </div>
             </section>
 
-            <!-- SCREEN 4: SKILLS -->
-            <section class="tab-screen" id="screen-skills">
-                <div class="skills-container">
-                    <div class="screen-header">
-                        <h2>Skills & Expertise</h2>
-                        <p>Detailed breakdown of framework knowledge, libraries, and core coding proficiencies.</p>
-                    </div>
-
-                    <div class="skills-grid-layout">
+            <!-- SECTION 4: CODEX (SKILLS) -->
+            <section class="page-view" id="view-skills">
+                <div class="codex-container">
+                    <div class="cell-label">Technical Competence</div>
+                    <h2 class="section-title">THE CODEX</h2>
+                    
+                    <div class="codex-grid">
                         
-                        <!-- Skill Category 1 -->
-                        <div class="skills-card">
-                            <h4>Mobile & Desktop</h4>
-                            <div class="skill-meter-list">
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>Flutter & Dart</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 90%"></div></div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>Flutter Desktop Widgets</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>State Management (Provider/Bloc)</span>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
-                                </div>
+                        <!-- Skill Box 1 -->
+                        <div class="codex-card">
+                            <div class="codex-header">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                <h3>Mobile & Desktop</h3>
+                            </div>
+                            <p class="codex-tagline">Cross-platform interfaces</p>
+                            <div class="codex-skills-list">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>State Management</span>
+                                <span>Custom Widgets</span>
+                                <span>Hotkey Bindings</span>
                             </div>
                         </div>
 
-                        <!-- Skill Category 2 -->
-                        <div class="skills-card">
-                            <h4>Backend Frameworks</h4>
-                            <div class="skill-meter-list">
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>Django & Python</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>Django REST Framework</span>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>JWT API Security</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
-                                </div>
+                        <!-- Skill Box 2 -->
+                        <div class="codex-card">
+                            <div class="codex-header">
+                                <i class="fa-solid fa-server"></i>
+                                <h3>Backend & APIs</h3>
+                            </div>
+                            <p class="codex-tagline">Scalable logic & services</p>
+                            <div class="codex-skills-list">
+                                <span>Django</span>
+                                <span>Django REST (DRF)</span>
+                                <span>Python</span>
+                                <span>JWT Auth</span>
+                                <span>API Documentation</span>
                             </div>
                         </div>
 
-                        <!-- Skill Category 3 -->
-                        <div class="skills-card">
-                            <h4>Databases & Tools</h4>
-                            <div class="skill-meter-list">
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>MySQL & PostgreSQL</span>
-                                        <span>80%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 80%"></div></div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>HTML, CSS & Bootstrap</span>
-                                        <span>88%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 88%"></div></div>
-                                </div>
-                                <div class="meter-item">
-                                    <div class="meter-labels">
-                                        <span>Git & Version Control</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="meter-bar"><div class="meter-fill" style="width: 85%"></div></div>
-                                </div>
+                        <!-- Skill Box 3 -->
+                        <div class="codex-card">
+                            <div class="codex-header">
+                                <i class="fa-solid fa-database"></i>
+                                <h3>Databases & Web</h3>
+                            </div>
+                            <p class="codex-tagline">Data persistence & layouts</p>
+                            <div class="codex-skills-list">
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>HTML5 / CSS3</span>
+                                <span>Bootstrap</span>
+                                <span>Git & GitHub</span>
                             </div>
                         </div>
 
@@ -407,86 +353,76 @@
                 </div>
             </section>
 
-            <!-- SCREEN 5: CONTACT -->
-            <section class="tab-screen" id="screen-contact">
-                <div class="contact-container">
-                    <div class="screen-header">
-                        <h2>Get In Touch</h2>
-                        <p>Feel free to reach out for collaboration, project details, or freelance work.</p>
-                    </div>
-
-                    <div class="contact-grid">
-                        <!-- Left Info -->
-                        <div class="contact-details-panel">
-                            <div class="contact-item-link">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div>
-                                    <h5>Email</h5>
-                                    <p><a href="mailto:jamilahmed20201970@gmail.com">jamilahmed20201970@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item-link">
-                                <i class="fa-solid fa-phone"></i>
-                                <div>
-                                    <h5>Phone</h5>
-                                    <p><a href="tel:+923054246898">+92 305 4246898</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item-link">
-                                <i class="fa-brands fa-linkedin"></i>
-                                <div>
-                                    <h5>LinkedIn</h5>
-                                    <p><a href="https://linkedin.com/in/moaz-jamil-3630a7324/" target="_blank" rel="noopener">Moaz Jamil</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item-link">
-                                <i class="fa-brands fa-github"></i>
-                                <div>
-                                    <h5>GitHub</h5>
-                                    <p><a href="https://github.com/moaz-jamil" target="_blank" rel="noopener">github.com/moaz-jamil</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Form -->
-                        <div class="contact-form-panel">
-                            <form id="contact-form" class="clean-form">
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="name">Your Name</label>
-                                        <input type="text" id="name" required placeholder="Enter name...">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Your Email</label>
-                                        <input type="email" id="email" required placeholder="Enter email...">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" id="subject" required placeholder="Project proposal...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" rows="5" required placeholder="Tell me details..."></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Send Message</button>
-                                <div class="form-status-msg" id="form-status-msg"></div>
-                            </form>
+            <!-- SECTION 5: CONTACT -->
+            <section class="page-view" id="view-contact">
+                <div class="contact-layout">
+                    
+                    <!-- Left Info -->
+                    <div class="contact-info">
+                        <div class="cell-label">Collaboration Node</div>
+                        <h2 class="huge-txt">LET'S BUILD SOMETHING UNIQUE.</h2>
+                        
+                        <div class="links-stack">
+                            <a href="mailto:jamilahmed20201970@gmail.com" class="link-item">
+                                <span class="link-label">Mail</span>
+                                <span class="link-value">jamilahmed20201970@gmail.com</span>
+                            </a>
+                            <a href="tel:+923054246898" class="link-item">
+                                <span class="link-label">Call</span>
+                                <span class="link-value">+92 305 4246898</span>
+                            </a>
+                            <a href="https://linkedin.com/in/moaz-jamil-3630a7324/" target="_blank" rel="noopener" class="link-item">
+                                <span class="link-label">LinkedIn</span>
+                                <span class="link-value">moaz-jamil-3630a7324</span>
+                            </a>
+                            <a href="https://github.com/moaz-jamil" target="_blank" rel="noopener" class="link-item">
+                                <span class="link-label">GitHub</span>
+                                <span class="link-value">github.com/moaz-jamil</span>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Right Form Console -->
+                    <div class="contact-console">
+                        <div class="cell-label">Secure Message Transmitter</div>
+                        <form id="transmitter-form" class="console-form">
+                            <div class="field-group">
+                                <input type="text" id="t-name" required placeholder=" ">
+                                <label for="t-name">Your Name</label>
+                            </div>
+                            <div class="field-group">
+                                <input type="email" id="t-email" required placeholder=" ">
+                                <label for="t-email">Your Email</label>
+                            </div>
+                            <div class="field-group">
+                                <input type="text" id="t-subject" required placeholder=" ">
+                                <label for="t-subject">Subject</label>
+                            </div>
+                            <div class="field-group">
+                                <textarea id="t-message" rows="4" required placeholder=" "></textarea>
+                                <label for="t-message">Your Message</label>
+                            </div>
+                            <button type="submit" class="btn-submit" id="t-submit-btn">Send Message</button>
+                            <div id="transmitter-status" class="status-box"></div>
+                        </form>
+                    </div>
+
                 </div>
             </section>
 
-        </main>
-        
-        <!-- Footer -->
-        <footer class="app-footer">
-            <p>&copy; <span id="footer-year"></span> Moaz Jamil. All rights reserved.</p>
+        </div>
+
+        <!-- Elegant Minimalist Footer -->
+        <footer class="footer">
+            <div class="footer-wrap">
+                <p>&copy; <span id="year-label"></span> Moaz Jamil.</p>
+                <div class="scroll-ind">SCROLL TO NAVIGATE</div>
+            </div>
         </footer>
 
     </div>
 
-    <!-- Custom JS Scripts -->
+    <!-- Script file -->
     <script src="app.js"></script>
 </body>
 </html>
